@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: lavozim
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn config.wsgi:application --bind 0.0.0.0:$PORT
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
+      - key: ALLOWED_HOSTS
+        value: "lavozim.onrender.com"
+      - key: DB_NAME
+        value: "lavozim"
+      - key: DB_USER
+        value: "lavozim"
+      - key: DB_PASSWORD
+        value: "bubiYbM6AZansibFwQh2RxBPs2wpRswJ"
+      - key: DB_HOST
+        value: "dpg-d9f8l4jbc2fs73e7ujm0-a.ohio-postgres.render.com"
+      - key: DB_PORT
+        value: "5432"
+      - key: TELEGRAM_BOT_TOKEN
+        value: "8808258959:AAGSkX4VM1osEowX1hegFq5NCe_MXTE-QQw"

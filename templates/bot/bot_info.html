@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Telegram Bot{% endblock %}
+
+{% block content %}
+<div class="max-w-2xl mx-auto text-center py-12">
+    <div class="text-6xl mb-6">🤖</div>
+    <h1 class="text-3xl font-bold mb-4">Telegram Bot</h1>
+    <p class="text-gray-600 mb-8">
+        Telegram orqali ham o'quv dasturlarini o'tashingiz mumkin.
+        Quyidagi havolaga bosib botni ishga tushiring:
+    </p>
+    <a href="https://t.me/lavozim_bot" class="bg-blue-500 text-white px-8 py-4 rounded-xl text-lg inline-block hover:bg-blue-600">
+        @lavozim_bot ni ochish
+    </a>
+    <div class="mt-8 bg-white p-6 rounded-xl shadow-sm text-left">
+        <h3 class="font-bold mb-3">Bot buyruqlari:</h3>
+        <ul class="space-y-2 text-gray-600">
+            <li><code class="bg-gray-100 px-2 py-1 rounded">/start</code> - Botni ishga tushirish</li>
+            <li><code class="bg-gray-100 px-2 py-1 rounded">/profile</code> - Profilni ko'rish</li>
+            <li><code class="bg-gray-100 px-2 py-1 rounded">/courses</code> - O'quv dasturlari</li>
+            <li><code class="bg-gray-100 px-2 py-1 rounded">/progress</code> - Progress</li>
+            <li><code class="bg-gray-100 px-2 py-1 rounded">/help</code> - Yordam</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}Bosh sahifa - Lavozim{% endblock %}
+
+{% block content %}
+<div class="text-center py-16">
+    <h1 class="text-4xl font-bold text-gray-800 mb-4">🎓 Lavozim O'quv Platformasi</h1>
+    <p class="text-xl text-gray-600 mb-8">Xodimlarni o'qitish va onboarding tizimi</p>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mt-12">
+        <div class="bg-white p-6 rounded-xl shadow-sm">
+            <div class="text-3xl mb-4">🗺️</div>
+            <h3 class="font-bold text-lg mb-2">Route Map</h3>
+            <p class="text-gray-600 text-sm">Har bir lavozim uchun kunlarga bo'lingan o'quv dasturi</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm">
+            <div class="text-3xl mb-4">📝</div>
+            <h3 class="font-bold text-lg mb-2">Testlar</h3>
+            <p class="text-gray-600 text-sm">Bilim darajasini tekshirish uchun interaktiv testlar</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm">
+            <div class="text-3xl mb-4">🏆</div>
+            <h3 class="font-bold text-lg mb-2">Sertifikat</h3>
+            <p class="text-gray-600 text-sm">Kursni tugatganingizdan keyin sertifikat oling</p>
+        </div>
+    </div>
+
+    <div class="mt-12">
+        <a href="{% url 'bot_start' %}" class="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg hover:bg-blue-700">
+            Telegram Bot orqali boshlash
+        </a>
+    </div>
+</div>
+{% endblock %}

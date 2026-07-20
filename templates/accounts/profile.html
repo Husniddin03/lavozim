@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}Profil{% endblock %}
+
+{% block content %}
+<div class="max-w-2xl mx-auto">
+    <div class="bg-white p-8 rounded-xl shadow-sm">
+        <h2 class="text-2xl font-bold mb-6">👤 Profil</h2>
+        <div class="space-y-4">
+            <div class="flex justify-between border-b pb-3">
+                <span class="text-gray-600">Ism:</span>
+                <span class="font-medium">{{ user.full_name }}</span>
+            </div>
+            <div class="flex justify-between border-b pb-3">
+                <span class="text-gray-600">Telefon:</span>
+                <span class="font-medium">{{ user.phone_number }}</span>
+            </div>
+            <div class="flex justify-between border-b pb-3">
+                <span class="text-gray-600">Rol:</span>
+                <span class="font-medium">{{ user.get_role_display }}</span>
+            </div>
+            {% if user.department %}
+            <div class="flex justify-between border-b pb-3">
+                <span class="text-gray-600">Bo'lim:</span>
+                <span class="font-medium">{{ user.department }}</span>
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="mt-8">
+            <h3 class="font-bold text-lg mb-4">📊 Statistika</h3>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-blue-50 p-4 rounded-lg text-center">
+                    <div class="text-2xl font-bold text-blue-600">0</div>
+                    <div class="text-sm text-gray-600">Jami XP</div>
+                </div>
+                <div class="bg-green-50 p-4 rounded-lg text-center">
+                    <div class="text-2xl font-bold text-green-600">1</div>
+                    <div class="text-sm text-gray-600">Daraja</div>
+                </div>
+                <div class="bg-orange-50 p-4 rounded-lg text-center">
+                    <div class="text-2xl font-bold text-orange-600">0</div>
+                    <div class="text-sm text-gray-600">Streak</div>
+                </div>
+                <div class="bg-purple-50 p-4 rounded-lg text-center">
+                    <div class="text-2xl font-bold text-purple-600">0</div>
+                    <div class="text-sm text-gray-600">Tugallangan</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
